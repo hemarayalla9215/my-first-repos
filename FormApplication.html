@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Creating Form with JS</title>
+    <meta charset="utf-8" />
+    <link href="formstyling.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="formjavascript.js"></script>
+</head>
+
+<body>
+    <div>
+        <form name="contactForm" method="post" onsubmit="return validateform()" action="#">
+            <h1> Register Here</h1>
+            <div class="row">
+                <label> Full Name</label>
+                <input type="text" name="fullname" />
+                <div id="fullnameErr" class="error"></div>
+            </div>
+
+            <div class="row">
+                <label> Email Address </label>
+                <input type="text" name="emailaddress" />
+                <div id="emailaddressErr" class="error"></div>
+            </div>
+            <div class="row">
+                <label> Phone Number </label>
+                <input type="text" name="phonenumber" />
+                <div id="phonenumberErr" class="error"></div>
+            </div>
+            <div class="row">
+                <label> country </label>
+                <select name="country">
+                    <option value="select any country">select any country</option>
+                    <option value="india">India</option>
+                    <option value="australia">Australia</option>
+                    <option value="USA">USA</option>
+                    <option value="United kingdom">United Kingdom</option>
+                </select>
+                <div id="countryErr" class="error"></div>
+            </div><br>
+            <div class="row">
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male" />male
+                <input type="radio" name="gender" value="female" /> female
+                <div id="genderErr" class="error"></div>
+            </div><br>
+            <div class="row">
+                <label>Hobbies(optional)</label>
+                <input type="checkbox" name="hobbies[]" value="sports" /> sports
+                <input type="checkbox" name="hobbies[]" value="movies" /> Art
+                <input type="checkbox" name="hobbies[]" value="dance" /> Dance
+                <input type="checkbox" name="hobbies[]" value="other" /> other
+            </div>
+
+            <div class="row">
+                <input type="submit" name="submit" value="submit" />
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
